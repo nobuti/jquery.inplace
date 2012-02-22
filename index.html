@@ -1,0 +1,39 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+	
+	<title>Edit in place</title>
+	<meta name="description" content="Edit in place jquery plugin demostration">
+	<meta name="author" content="nobuti">
+	
+	<style>
+		.rollover {
+			background: #f0f0f0;
+		}
+	</style>
+</head>
+<body>
+	<p class='editable'>Hello world!<br>I am editable.</p>
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.inplace.js"></script>
+	
+	<script>
+	
+		$(document).ready(function() {
+			  
+			$(".editable")
+		      	.inplace({
+		      		event:'editEvent',
+		      		key: 'cmd',
+		      		class: 'rollover'
+		      	})
+		      	.on('editEvent', function(e){
+		      		console.log('trigger event: save content for example');
+				});
+		});
+		
+	</script>
+	
+</body>
+</html>
