@@ -44,8 +44,10 @@
         },
         hover: function(e){
         	e.preventDefault();
-        	var self = $(this);    
-        	self.addClass(settings.class);
+        	var self = $(this);  
+        	if (!self.data('editing')){   
+        		self.addClass(settings.class);
+        	}
         },
         mouseout: function(e){
         	e.preventDefault();
