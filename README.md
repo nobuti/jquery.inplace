@@ -22,4 +22,4 @@ Small plugin to add "edit-in-place" funcionality.
 			});
 	});
 
-You should now be able to edit all objects of class 'editable' in place.
+You should now be able to edit all objects of class 'editable' in place on double click event.
